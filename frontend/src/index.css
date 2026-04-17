@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red: #cc2200;
+  --red-dark: #a81b00;
+  --red-light: #ff3a1a;
+  --red-bg: #fff5f3;
+  --dark: #111111;
+  --dark2: #1e1e1e;
+  --mid: #2e2e2e;
+  --gray: #888;
+  --gray-light: #f2f2f2;
+  --border: #e0e0e0;
+  --white: #ffffff;
+  --green: #16a34a;
+  --amber: #d97706;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+body {
+  font-family: var(--font-body);
+  background: #f7f7f5;
+  color: var(--dark);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 99px; }
+
+/* Transitions */
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--font-body); }
+input, select, textarea { font-family: var(--font-body); }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.fade-up { animation: fadeUp 0.35s ease both; }
+.fade-up-2 { animation: fadeUp 0.35s 0.05s ease both; }
+.fade-up-3 { animation: fadeUp 0.35s 0.1s ease both; }
+.fade-up-4 { animation: fadeUp 0.35s 0.15s ease both; }
+
+/* Toast notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.toast {
+  background: var(--dark);
+  color: white;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  animation: fadeUp 0.3s ease;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.toast.success { background: var(--green); }
+.toast.error { background: var(--red); }
+
+/* Status badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.badge-pending { background: #fef3c7; color: #92400e; }
+.badge-in_progress { background: #dbeafe; color: #1e40af; }
+.badge-completed { background: #dcfce7; color: #166534; }
+.badge-open { background: #fee2e2; color: #991b1b; }
+.badge-resolved { background: #dcfce7; color: #166534; }
+.badge-paid { background: #dcfce7; color: #166534; }
+.badge-unpaid { background: #fee2e2; color: #991b1b; }
