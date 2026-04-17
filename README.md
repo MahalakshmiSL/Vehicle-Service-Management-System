@@ -113,15 +113,13 @@ npm run dev
 ### 🔹 Components Page
 
 ![Components](./screenshots/components.png)
+![Vehicles](./screenshots/vehicles.png)
+![Issues](./screenshots/issues.png)
+![payment](./screenshots/payment.png)
+![Graph](./screenshots/graph.png)
 
 
 
-## 🚀 Live Demo
-
-* Frontend: https://your-frontend-url.vercel.app
-* Backend: https://your-backend-url.onrender.com
-
----
 
 ## 💡 Future Improvements
 
